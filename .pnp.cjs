@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:22.7.4"],\
             ["@types/react", "npm:18.3.11"],\
             ["@types/react-dom", "npm:18.3.0"],\
+            ["@vercel/speed-insights", "virtual:47e4f689de322c14f3256d856b421a03e5cccb531a2c550f3301534c49a243f0d2435b2f4d0415f1736de874d5826bc2e7fcfcfc6b0f0fc35c74281429fc0436#npm:1.1.0"],\
             ["autoprefixer", "virtual:47e4f689de322c14f3256d856b421a03e5cccb531a2c550f3301534c49a243f0d2435b2f4d0415f1736de874d5826bc2e7fcfcfc6b0f0fc35c74281429fc0436#npm:10.4.20"],\
             ["eslint", "npm:8.40.0"],\
             ["eslint-config-next", "virtual:47e4f689de322c14f3256d856b421a03e5cccb531a2c550f3301534c49a243f0d2435b2f4d0415f1736de874d5826bc2e7fcfcfc6b0f0fc35c74281429fc0436#npm:14.2.14"],\
@@ -1048,6 +1049,48 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/visitor-keys", "npm:8.14.0"],\
             ["@typescript-eslint/types", "npm:8.14.0"],\
             ["eslint-visitor-keys", "npm:3.4.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vercel/speed-insights", [\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/unplugged/@vercel-speed-insights-virtual-c1ca9b076b/node_modules/@vercel/speed-insights/",\
+          "packageDependencies": [\
+            ["@vercel/speed-insights", "npm:1.1.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:47e4f689de322c14f3256d856b421a03e5cccb531a2c550f3301534c49a243f0d2435b2f4d0415f1736de874d5826bc2e7fcfcfc6b0f0fc35c74281429fc0436#npm:1.1.0", {\
+          "packageLocation": "./.yarn/unplugged/@vercel-speed-insights-virtual-c1ca9b076b/node_modules/@vercel/speed-insights/",\
+          "packageDependencies": [\
+            ["@vercel/speed-insights", "virtual:47e4f689de322c14f3256d856b421a03e5cccb531a2c550f3301534c49a243f0d2435b2f4d0415f1736de874d5826bc2e7fcfcfc6b0f0fc35c74281429fc0436#npm:1.1.0"],\
+            ["@sveltejs/kit", null],\
+            ["@types/next", null],\
+            ["@types/react", "npm:18.3.11"],\
+            ["@types/svelte", null],\
+            ["@types/sveltejs__kit", null],\
+            ["@types/vue", null],\
+            ["@types/vue-router", null],\
+            ["next", "virtual:47e4f689de322c14f3256d856b421a03e5cccb531a2c550f3301534c49a243f0d2435b2f4d0415f1736de874d5826bc2e7fcfcfc6b0f0fc35c74281429fc0436#npm:14.2.14"],\
+            ["react", "npm:18.3.1"],\
+            ["svelte", null],\
+            ["vue", null],\
+            ["vue-router", null]\
+          ],\
+          "packagePeers": [\
+            "@sveltejs/kit",\
+            "@types/next",\
+            "@types/react",\
+            "@types/svelte",\
+            "@types/sveltejs__kit",\
+            "@types/vue-router",\
+            "@types/vue",\
+            "next",\
+            "react",\
+            "svelte",\
+            "vue-router",\
+            "vue"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4053,6 +4096,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:22.7.4"],\
             ["@types/react", "npm:18.3.11"],\
             ["@types/react-dom", "npm:18.3.0"],\
+            ["@vercel/speed-insights", "virtual:47e4f689de322c14f3256d856b421a03e5cccb531a2c550f3301534c49a243f0d2435b2f4d0415f1736de874d5826bc2e7fcfcfc6b0f0fc35c74281429fc0436#npm:1.1.0"],\
             ["autoprefixer", "virtual:47e4f689de322c14f3256d856b421a03e5cccb531a2c550f3301534c49a243f0d2435b2f4d0415f1736de874d5826bc2e7fcfcfc6b0f0fc35c74281429fc0436#npm:10.4.20"],\
             ["eslint", "npm:8.40.0"],\
             ["eslint-config-next", "virtual:47e4f689de322c14f3256d856b421a03e5cccb531a2c550f3301534c49a243f0d2435b2f4d0415f1736de874d5826bc2e7fcfcfc6b0f0fc35c74281429fc0436#npm:14.2.14"],\

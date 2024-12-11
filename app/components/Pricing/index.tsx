@@ -5,59 +5,61 @@ import Image from 'next/image';
 const names = [
     {
         heading: "Lite",
-        price: 41,
+        price: 20, // Annual price divided by 12 for monthly equivalent: $1.67 (approx.)
         subscriber: 0.50,
         button: "Start free trial",
-        option: 'Sed ut perspiciatis unde',
-        category: 'yearly',
-        imgSrc: '/assets/pricing/starone.svg',
+        option1: "10 applications per year",
+        option2: 'Limited access to curated opportunities.',
+        option3:"Basic AI-powered opportunity recommendations.",
+        category: "yearly",
+        imgSrc: "/assets/pricing/starone.svg",
     },
     {
         heading: "Basic",
-        price: 29,
+        price: 50, // Annual price divided by 12 for monthly equivalent: $4.17 (approx.)
         subscriber: 0.50,
         button: "Start free trial",
-        option: 'Sed ut perspiciatis unde',
-        category: 'yearly',
-        imgSrc: '/assets/pricing/startwo.svg',
+        option: "35 applications per year",
+        category: "yearly",
+        imgSrc: "/assets/pricing/startwo.svg",
     },
     {
         heading: "Plus",
-        price: 139,
+        price: 100, // Annual price divided by 12 for monthly equivalent: $8.33 (approx.)
         subscriber: 0.50,
         button: "Start free trial",
-        option: 'Sed ut perspiciatis unde',
-        category: 'yearly',
-        imgSrc: '/assets/pricing/starthree.svg',
-    },
-    {
-        heading: "Plus",
-        price: 139,
-        subscriber: 0.50,
-        button: "Start free trial",
-        option: 'Sed ut perspiciatis unde',
-        category: 'monthly',
-        imgSrc: '/assets/pricing/starone.svg',
+        option: "Unlimited applications per year",
+        category: "yearly",
+        imgSrc: "/assets/pricing/starthree.svg",
     },
     {
         heading: "Lite",
-        price: 41,
+        price: 1.67, // Converted to monthly equivalent for Lite
         subscriber: 0.50,
         button: "Start free trial",
-        option: 'Sed ut perspiciatis unde',
-        category: 'monthly',
-        imgSrc: '/assets/pricing/startwo.svg',
+        option: "10 applications per year",
+        category: "monthly",
+        imgSrc: "/assets/pricing/starone.svg",
     },
     {
         heading: "Basic",
-        price: 29,
+        price: 4.17, // Converted to monthly equivalent for Basic
         subscriber: 0.50,
         button: "Start free trial",
-        option: 'Sed ut perspiciatis unde',
-        category: 'monthly',
-        imgSrc: '/assets/pricing/starthree.svg',
+        option: "35 applications per year",
+        category: "monthly",
+        imgSrc: "/assets/pricing/startwo.svg",
     },
-]
+    {
+        heading: "Plus",
+        price: 8.33, // Converted to monthly equivalent for Plus
+        subscriber: 0.50,
+        button: "Start free trial",
+        option: "Unlimited applications per year",
+        category: "monthly",
+        imgSrc: "/assets/pricing/starthree.svg",
+    },
+];
 
 
 const Pricing = () => {
@@ -76,8 +78,6 @@ const Pricing = () => {
             <Image src="/assets/pricing/lowerline.png" alt="lowerline-image" width={180} height={100} className='absolute bottom-[0px] right-[90px]' />
             <div className='mx-auto max-w-7xl sm:py-20 lg:px-8 my-16'>
                 <h3 className='text-center text-4xl sm:text-65xl font-black'>Our Pricing Plan.</h3>
-
-                <p className='text-lg font-normal text-center text-black opacity-60 pt-5'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br /> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.</p>
 
                 <div className='mt-6 relative'>
                     <div className='flex justify-center'>
@@ -105,12 +105,10 @@ const Pricing = () => {
                     {
                         filteredData.map((item, index) => (
                             <div className='pt-10 pb-28 pl-10 pr-10 bg-white rounded-3xl bxshd relative cursor-pointer hover:bg-dodgerblue group' key={index}>
-                                <Image src={item.imgSrc} alt="star-image" width={154} height={154} className='absolute bottom-0 right-0' />
+                    
                                 <h4 className='text-4xl sm:text-5xl font-semibold mb-8 text-midnightblue group-hover:text-white'>{item.heading}</h4>
                                 <button className='text-xl font-medium text-white w-full bg-blue hover:text-white group-hover:bg-cornflowerblue group-hover:border-cornflowerblue border-2 border-blue rounded-full py-4 px-12 mb-8'>{item.button}</button>
-                                <h2 className='text-4xl sm:text-5xl font-semibold text-midnightblue mb-3 group-hover:text-white'>${item.price}/<span className='text-lightgrey'>mo</span></h2>
-                                <p className='text-lg font-normal text-black group-hover:text-white'>${item.subscriber}<span>/ Subscriber</span></p>
-                                <p className='text-lg font-normal text-black opacity-40 mb-6 group-hover:text-white'>(per subscriber per month)</p>
+                                <h2 className='text-4xl sm:text-5xl font-semibold text-midnightblue mb-3 group-hover:text-white'>${item.price}/<span className='text-lightgrey'>{selectedCategory === 'yearly' ? 'yr' : 'mo'}</span></h2>
 
                                 <div className='flex gap-4'>
                                     <Image src="/assets/pricing/tick.svg" alt="tick-image" width={32} height={32} />

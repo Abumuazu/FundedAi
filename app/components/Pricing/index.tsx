@@ -8,7 +8,7 @@ const names = [
         price: 20, // Annual price divided by 12 for monthly equivalent: $1.67 (approx.)
         subscriber: 0.50,
         button: "Start free trial",
-        option1: "10 applications per year",
+        option: "10 applications per year",
         option2: 'Limited access to curated opportunities.',
         option3:"Basic AI-powered opportunity recommendations.",
         category: "yearly",

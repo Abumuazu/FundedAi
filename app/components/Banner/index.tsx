@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Register from '../Navbar/Registerdialog';
 
 const Banner = () => {
 
@@ -14,11 +15,9 @@ const Banner = () => {
                         {/* <Image src="/assets/banner/lineone.svg" alt="line-image" width={190} height={148} className='absolute top-[-74px] right-[51px]' /> */}
                         <h1 className='text-midnightblue text-4xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5'>Unlock Global Opportunities</h1>
                         <h3 className='text-black opacity-75 text-lg font-normal text-center lg:text-start pt-8'>Empowering your journey with AI-driven solutions to secure globally funded opportunities. From work visas to scholarships, global events to startup grants, visas—your dreams, funded.</h3>
-                        <div className='pt-8 mx-auto lg:mx-0'>
-                            <button className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-[#D33B79] hover:text-white hover:bg-[#D33B79]">
-                                Get started
-                            </button>
-                        </div>
+                       
+                       {/* <Register /> */}
+                     
                     </div>
 
                     <div className='col-span-5 flex justify-center xl:-mb-22 xl:-mr-32 pt-10 lg:pt-0'>

@@ -18,7 +18,8 @@ const Register = () => {
         <>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
                 <div className='hidden lg:block'>
-                    <button className="text-[#ec5290] text-xl font-medium ml-9 py-6 px-12 transition duration-150 ease-in-out bg-white hover:text-white rounded-full hover:bg-[#D33B79] ttty" onClick={openModal}>
+                    <button className="text-[#ec5290] text-xl font-medium ml-9 py-6 px-12 transition duration-150 ease-in-out bg-white hover:text-white rounded-full hover:bg-[#D33B79] ttty w-full bg-blue hover:text-black group-hover:bg-cornflowerblue group-hover:border-cornflowerblue border-2 border-blue rounded-full" onClick={openModal}>
+                 
                         Get Started
                     </button>
                 </div>
@@ -49,7 +50,7 @@ const Register = () => {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
 
                                     <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
                                         <div className="w-full max-w-md space-y-8">
@@ -60,73 +61,14 @@ const Register = () => {
                                                     alt="Your Company"
                                                 />
                                                 <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-                                                   Gain early access fo 50% off
+                                                   Gain early access to 50% off
                                                 </h2>
                                             </div>
-                                            <form className="mt-8 space-y-6" action="#" method="POST">
-                                                <input type="hidden" name="remember" defaultValue="true" />
-                                                <div className="-space-y-px rounded-md shadow-sm">
-                                                    <div>
-                                                        <label htmlFor="email-address" className="sr-only">
-                                                            Email address
-                                                        </label>
-                                                        <input
-                                                            id="email-address"
-                                                            name="email"
-                                                            type="email"
-                                                            autoComplete="email"
-                                                            required
-                                                            className="relative block w-full appearance-none rounded-none rounded-t-md border border-grey500 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                                                            placeholder="Email address"
-                                                        />
-                                                    </div>
-                                                    <div>
-                                                        <label htmlFor="password" className="sr-only">
-                                                            Password
-                                                        </label>
-                                                        <input
-                                                            id="password"
-                                                            name="password"
-                                                            type="password"
-                                                            autoComplete="current-password"
-                                                            required
-                                                            className="relative block w-full appearance-none rounded-none rounded-b-md border border-grey500 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                                                            placeholder="Password"
-                                                        />
-                                                    </div>
-                                                </div>
-
-                                                <div className="flex items-center justify-between">
-                                                    <div className="flex items-center">
-                                                        <input
-                                                            id="remember-me"
-                                                            name="remember-me"
-                                                            type="checkbox"
-                                                            className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                                        />
-                                                        <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                                                            Remember me
-                                                        </label>
-                                                    </div>
-
-                                                </div>
-
-                                                <div>
-                                                    <button
-                                                        type="submit"
-                                                        className="group relative flex w-full justify-center rounded-md border border-transparent bg-[#D33B79]  py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                    >
-                                                        <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                                                            <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
-                                                        </span>
-                                                        Register Now
-                                                    </button>
-                                                </div>
-                                            </form>
+                                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf15wa1fThAfM3LSonN6yOtWIk7pcs6u7KeHomgpnQjgaWB_A/viewform?embedded=true" width="400" height="1390" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                                         </div>
                                     </div>
 
-
+                                 
                                     <div className="mt-4 flex justify-end">
                                         <button
                                             type="button"

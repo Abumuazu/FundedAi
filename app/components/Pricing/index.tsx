@@ -1,60 +1,105 @@
 "use client";
 import { SetStateAction, useState } from 'react';
 import Image from 'next/image';
+import Register from '../Navbar/Registerdialog';
 
 const names = [
     {
-        heading: "Lite",
-        price: 20, // Annual price divided by 12 for monthly equivalent: $1.67 (approx.)
-        subscriber: 0.50,
-        button: "Start free trial",
-        option: "10 applications per year",
-        option2: 'Limited access to curated opportunities.',
-        option3:"Basic AI-powered opportunity recommendations.",
+        heading: "Student plan",
+        price: 40, 
+        button: "Get Started",
+        option: "Gain access to Global scholarships ",
+        option1: '•Get access to paid internship opportunities',
+        option2:"Get access to Student loans and grants",
         category: "yearly",
         imgSrc: "/assets/pricing/starone.svg",
     },
     {
-        heading: "Basic",
-        price: 50, // Annual price divided by 12 for monthly equivalent: $4.17 (approx.)
-        subscriber: 0.50,
-        button: "Start free trial",
-        option: "35 applications per year",
+        heading: "Career Plan",
+        price: 100, // Annual price divided by 12 for monthly equivalent: $1.67 (approx.)
+        button: "Get Started",
+        option: "Get access to Globally remote career job opportunities",
+        option1: 'Get access to Global Talent visas',
+        option2:"Get access to Professional scholarships for MBA and MSC or certification courses.",
+        category: "yearly",
+        imgSrc: "/assets/pricing/starone.svg",
+    },
+    {
+        heading: "Business Plan",
+        price: 200, // Annual price divided by 12 for monthly equivalent: $4.17 (approx.)
+        button: "Get Started",
+        option: "Get access to Globally available grants per sector.",
+        option1: 'Get access to Globally available Angels and VCs',
+        option2:"Get access to Global Startup Visas",
+        option3:"Get access to Funded Travels for conferences and events, Business loans and credits",
         category: "yearly",
         imgSrc: "/assets/pricing/startwo.svg",
     },
     {
-        heading: "Plus",
-        price: 100, // Annual price divided by 12 for monthly equivalent: $8.33 (approx.)
-        subscriber: 0.50,
-        button: "Start free trial",
+        heading: "Ultra Plan",
+        price: 300, // Annual price divided by 12 for monthly equivalent: $8.33 (approx.)
+        button: "Get Started",
+        option: "Get access to all option in student plan",
+        option1: 'Get access to all option in career plan',
+        option2:"Get access to all option in business plan",
+        option3:"premium curated support from our team",
+        category: "yearly",
+        imgSrc: "/assets/pricing/starthree.svg",
+    },
+    {
+        heading: "Enterprise Plan",
+        price: 1, // Annual price divided by 12 for monthly equivalent: $8.33 (approx.)
+        button: "Get Started",
         option: "Unlimited applications per year",
         category: "yearly",
         imgSrc: "/assets/pricing/starthree.svg",
     },
     {
-        heading: "Lite",
-        price: 1.67, // Converted to monthly equivalent for Lite
-        subscriber: 0.50,
-        button: "Start free trial",
-        option: "10 applications per year",
+        heading: "Student plan",
+        price: 3.33, 
+        button: "Get Started",
+        option: "Gain access to Global scholarships ",
+        option1: '•Get access to paid internship opportunities',
+        option2:"Get access to Student loans and grants",
         category: "monthly",
         imgSrc: "/assets/pricing/starone.svg",
     },
     {
-        heading: "Basic",
-        price: 4.17, // Converted to monthly equivalent for Basic
-        subscriber: 0.50,
-        button: "Start free trial",
-        option: "35 applications per year",
+        heading: "Career Plan",
+        price: 8.33,
+        button: "Get Started",
+        option: "Get access to Globally remote career job opportunities",
+        option1: 'Get access to Global Talent visas',
+        option2:"Get access to Professional scholarships for MBA and MSC or certification courses.",
+        category: "monthly",
+        imgSrc: "/assets/pricing/starone.svg",
+    },
+    {
+        heading: "Business Plan",
+        price: 16.67, // Converted to monthly equivalent for Business Plan
+        button: "Get Started",
+        option: "Get access to Globally available grants per sector.",
+        option1: 'Get access to Globally available Angels and VCs',
+        option2:"Get access to Global Startup Visas",
+        option3:"Get access to Funded Travels for conferences and events, Business loans and credits",
         category: "monthly",
         imgSrc: "/assets/pricing/startwo.svg",
     },
     {
-        heading: "Plus",
-        price: 8.33, // Converted to monthly equivalent for Plus
-        subscriber: 0.50,
-        button: "Start free trial",
+        heading: "Ultra Plan",
+        price: 25, // Converted to monthly equivalent for Ultra Plan
+        button: "Get Started",
+        option: "Get access to all option in student plan",
+        option1: 'Get access to all option in career plan',
+        option2:"Get access to all option in business plan",
+        option3:"premium curated support from our team",
+        category: "monthly",
+        imgSrc: "/assets/pricing/starthree.svg",
+    },
+    {
+        heading: "Enterprise Plan",
+        price: 8.33, 
+        button: "Get Started",
         option: "Unlimited applications per year",
         category: "monthly",
         imgSrc: "/assets/pricing/starthree.svg",
@@ -83,14 +128,14 @@ const Pricing = () => {
                     <div className='flex justify-center'>
                         <div className='bg-cornflowerblue flex py-1 px-1 rounded-full '>
                             <h3
-                                className={`text-xl font-medium cursor-pointer ${selectedCategory === 'yearly' ? 'text-electricblue bg-white rounded-full py-2 px-4 sm:py-4 sm:px-16' : 'text-white py-2 px-4 sm:py-4 sm:px-16'
+                                className={`text-xl font-medium cursor-pointer ${selectedCategory === 'yearly' ? 'text-electricblue bg-white rounded-full py-2 px-4 sm:py-4 sm:px-16' : 'text-black py-2 px-4 sm:py-4 sm:px-16'
                                     }`}
                                 onClick={() => handleCategoryChange('yearly')}
                             >
                                 Yearly
                             </h3>
                             <h3
-                                className={`text-xl font-medium cursor-pointer ${selectedCategory === 'monthly' ? 'text-electricblue bg-white rounded-full py-2 px-4 sm:py-4 sm:px-16' : 'text-white py-2 px-4 sm:py-4 sm:px-16'
+                                className={`text-xl font-medium cursor-pointer ${selectedCategory === 'monthly' ? 'text-electricblue bg-white rounded-full py-2 px-4 sm:py-4 sm:px-16' : 'text-black py-2 px-4 sm:py-4 sm:px-16'
                                     }`}
                                 onClick={() => handleCategoryChange('monthly')}
                             >
@@ -106,9 +151,9 @@ const Pricing = () => {
                         filteredData.map((item, index) => (
                             <div className='pt-10 pb-28 pl-10 pr-10 bg-white rounded-3xl bxshd relative cursor-pointer hover:bg-dodgerblue group' key={index}>
                     
-                                <h4 className='text-4xl sm:text-5xl font-semibold mb-8 text-midnightblue group-hover:text-white'>{item.heading}</h4>
-                                <button className='text-xl font-medium text-white w-full bg-blue hover:text-white group-hover:bg-cornflowerblue group-hover:border-cornflowerblue border-2 border-blue rounded-full py-4 px-12 mb-8'>{item.button}</button>
-                                <h2 className='text-4xl sm:text-5xl font-semibold text-midnightblue mb-3 group-hover:text-white'>${item.price}/<span className='text-lightgrey'>{selectedCategory === 'yearly' ? 'yr' : 'mo'}</span></h2>
+                                <h4 className='text-4xl sm:text-4xl font-semibold mb-8 text-midnightblue group-hover:text-white'>{item.heading}</h4>
+                               <Register />
+                                <h2 className='text-4xl sm:text-5xl font-semibold text-midnightblue mb-3 mt-5 group-hover:text-white'>{item.heading === "Enterprise Plan" ? 'Customized': '$' + item.price + '/'}<span className='text-lightgrey'>{(item.heading !== "Enterprise Plan") && (selectedCategory === 'yearly' ? 'yr' : 'mo')}</span></h2>
 
                                 <div className='flex gap-4'>
                                     <Image src="/assets/pricing/tick.svg" alt="tick-image" width={32} height={32} />
@@ -116,16 +161,20 @@ const Pricing = () => {
                                 </div>
                                 <div className='flex gap-4 pt-6'>
                                     <Image src="/assets/pricing/tick.svg" alt="tick-image" width={32} height={32} />
-                                    <p className='text-lg font-medium text-black opacity-60 group-hover:text-translucentwhite'>{item.option}</p>
+                                    <p className='text-lg font-medium text-black opacity-60 group-hover:text-translucentwhite'>{item.option1}</p>
                                 </div>
                                 <div className='flex gap-4 pt-6'>
                                     <Image src="/assets/pricing/tick.svg" alt="tick-image" width={32} height={32} />
-                                    <p className='text-lg font-medium text-black opacity-60 group-hover:text-translucentwhite'>{item.option}</p>
+                                    <p className='text-lg font-medium text-black opacity-60 group-hover:text-translucentwhite'>{item.option2}</p>
                                 </div>
-                                <div className='flex gap-4 pt-6'>
+                               {
+                                item.option3 && (
+                                    <div className='flex gap-4 pt-6'>
                                     <Image src="/assets/pricing/tick.svg" alt="tick-image" width={32} height={32} />
-                                    <p className='text-lg font-medium text-black opacity-60 group-hover:text-translucentwhite'>{item.option}</p>
+                                    <p className='text-lg font-medium text-black opacity-60 group-hover:text-translucentwhite'>{item.option3}</p>
                                 </div>
+                                )
+                               }
                             </div>
                         ))}
                 </div>

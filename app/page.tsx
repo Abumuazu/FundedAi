@@ -14,7 +14,6 @@ export default function Home() {
       {/* <People /> */}
       <WhatWeDo />
       <WhyChooseUs />
-      <Business />
       <GetStarted />
       {/* <Payment /> */}
       <Pricing />

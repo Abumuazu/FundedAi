@@ -1,3 +1,4 @@
+
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { LockClosedIcon } from "@heroicons/react/20/solid";
@@ -65,17 +66,17 @@ const Register = () => {
                         </h2>
                       </div>
                       <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSf15wa1fThAfM3LSonN6yOtWIk7pcs6u7KeHomgpnQjgaWB_A/viewform?embedded=true"
-                        width="400"
-                        height="1390"
-                        frameBorder="0"
-                        marginHeight="0"
-                        marginWidth="0"
-                      >
-                        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+                          src="https://docs.google.com/forms/d/e/1FAIpQLSf15wa1fThAfM3LSonN6yOtWIk7pcs6u7KeHomgpnQjgaWB_A/viewform?embedded=true"
+                          width="400"
+                          height="1390"
+                          frameBorder="0"
+                          marginHeight={0} 
+                          marginWidth={0}  
+                          loading="lazy"
+                        >
+                          {/* Provide a fallback message for users */}
                           Loading...
-                        </h2>
-                      </iframe>
+                        </iframe>
                     </div>
                   </div>
 

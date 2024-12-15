@@ -1,3 +1,4 @@
+
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { LockClosedIcon } from "@heroicons/react/20/solid";
@@ -16,13 +17,15 @@ const Register2 = () => {
   return (
     <>
       <div className="pt-8 mx-auto lg:mx-0">
-        <button className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-[#D33B79] hover:text-white hover:bg-[#D33B79]"
-        onClick={openModal}
+        <button
+          className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-[#D33B79] hover:text-white hover:bg-[#D33B79]"
+          onClick={openModal}
         >
           Get started
         </button>
       </div>
 
+      {/* Modal Transition */}
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -61,18 +64,22 @@ const Register2 = () => {
                           Gain early access to 50% discount
                         </h2>
                       </div>
-                      <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSf15wa1fThAfM3LSonN6yOtWIk7pcs6u7KeHomgpnQjgaWB_A/viewform?embedded=true"
-                        width="400"
-                        height="1390"
-                        frameBorder="0"
-                        marginHeight="0"
-                        marginWidth="0"
-                      >
-                        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+
+                      {/* iframe should have a fallback text outside */}
+                      <div className="text-center mt-4">
+                        <iframe
+                          src="https://docs.google.com/forms/d/e/1FAIpQLSf15wa1fThAfM3LSonN6yOtWIk7pcs6u7KeHomgpnQjgaWB_A/viewform?embedded=true"
+                          width="400"
+                          height="1390"
+                          frameBorder="0"
+                          marginHeight={0}
+                          marginWidth={0}   
+                          loading="lazy"
+                        >
+                          {/* Provide a fallback message for users */}
                           Loading...
-                        </h2>
-                      </iframe>
+                        </iframe>
+                      </div>
                     </div>
                   </div>
 

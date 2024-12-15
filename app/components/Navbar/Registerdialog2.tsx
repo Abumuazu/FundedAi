@@ -2,7 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { LockClosedIcon } from "@heroicons/react/20/solid";
 
-const Register = () => {
+const Register2 = () => {
   let [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => {
@@ -15,15 +15,12 @@ const Register = () => {
 
   return (
     <>
-      <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
-        <div className="hidden lg:block">
-          <button
-            className="text-[#ec5290] text-xl font-medium  py-6 px-12 transition duration-150 ease-in-out bg-white hover:text-white rounded-full hover:bg-[#D33B79] ttty w-full bg-blue hover:text-black group-hover:bg-cornflowerblue group-hover:border-cornflowerblue border-2 border-blue rounded-full"
-            onClick={openModal}
-          >
-            Get Started
-          </button>
-        </div>
+      <div className="pt-8 mx-auto lg:mx-0">
+        <button className="text-white text-xl font-medium py-6 px-12 rounded-full transition duration-150 ease-in-out bg-[#D33B79] hover:text-white hover:bg-[#D33B79]"
+        onClick={openModal}
+        >
+          Get started
+        </button>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -98,4 +95,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Register2;

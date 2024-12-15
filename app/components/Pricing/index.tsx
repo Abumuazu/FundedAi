@@ -2,6 +2,7 @@
 import { SetStateAction, useState } from 'react';
 import Image from 'next/image';
 import Register from '../Navbar/Registerdialog';
+import Register2 from '../Navbar/Registerdialog2';
 
 const names = [
     {
@@ -50,7 +51,10 @@ const names = [
         heading: "Enterprise Plan",
         price: 1, // Annual price divided by 12 for monthly equivalent: $8.33 (approx.)
         button: "Get Started",
-        option: "Unlimited applications per year",
+        option: "Get access to all option in student plan",
+        option1: 'Get access to all option in business plan',
+        option2:"Get access to premium enterprise package",
+        option3:"premium curated support from our team",
         category: "yearly",
         imgSrc: "/assets/pricing/starthree.svg",
     },
@@ -100,7 +104,10 @@ const names = [
         heading: "Enterprise Plan",
         price: 8.33, 
         button: "Get Started",
-        option: "Unlimited applications per year",
+        option: "Get access to all option in student plan",
+        option1: 'Get access to all option in business plan',
+        option2:"Get access to premium enterprise package",
+        option3:"premium curated support from our team",
         category: "monthly",
         imgSrc: "/assets/pricing/starthree.svg",
     },
@@ -152,7 +159,7 @@ const Pricing = () => {
                             <div className='pt-10 pb-28 pl-10 pr-10 bg-white rounded-3xl bxshd relative cursor-pointer hover:bg-dodgerblue group' key={index}>
                     
                                 <h4 className='text-4xl sm:text-4xl font-semibold mb-8 text-midnightblue group-hover:text-white'>{item.heading}</h4>
-                               <Register />
+                               <Register2 />
                                 <h2 className='text-4xl sm:text-5xl font-semibold text-midnightblue mb-3 mt-5 group-hover:text-white'>{item.heading === "Enterprise Plan" ? 'Customized': '$' + item.price + '/'}<span className='text-lightgrey'>{(item.heading !== "Enterprise Plan") && (selectedCategory === 'yearly' ? 'yr' : 'mo')}</span></h2>
 
                                 <div className='flex gap-4'>

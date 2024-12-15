@@ -1,5 +1,7 @@
+'use client';
 import Image from 'next/image';
 import Register from '../Navbar/Registerdialog';
+import Register2 from '../Navbar/Registerdialog2';
 
 const Banner = () => {
 
@@ -16,7 +18,7 @@ const Banner = () => {
                         <h1 className='text-midnightblue text-4xl md:text-85xl text-center lg:text-start font-semibold lh-133 pt-5'>Unlock Global Opportunities</h1>
                         <h3 className='text-black opacity-75 text-lg font-normal text-center lg:text-start pt-8'>Empowering your journey with AI-driven solutions to secure globally funded opportunities. From work visas to scholarships, global events to startup grants, visas—your dreams, funded.</h3>
                        
-                       {/* <Register /> */}
+                       <Register2/>
                      
                     </div>
 

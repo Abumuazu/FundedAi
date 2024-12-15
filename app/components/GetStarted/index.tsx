@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import Register from "../Navbar/Registerdialog";
+import Register2 from "../Navbar/Registerdialog2";
 
 const GetStarted = () => {
   return (
@@ -22,13 +23,10 @@ const GetStarted = () => {
             Your next big opportunity is a click away. Sign up and let FundedAI
             take you further.
           </h3>
-          <div className="pt-8 mx-auto lg:mx-0">
-          {/* <Register /> */}
-          </div>
+          <Register2 />
         </div>
       </div>
     </div>
-
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Register2 from "./Registerdialog2";
 
 interface NavigationItem {
   name: string;
@@ -37,9 +38,7 @@ const Data = () => {
               </Link>
             ))}
             <div className="mt-4"></div>
-            <button className="bg-[#D33B79]  w-full hover:bg-[#D33B79]  hover:text-white text-white font-medium my-2 py-2 px-4 rounded">
-              Gte started
-            </button>
+       <Register2 />
           </div>
         </div>
       </div>

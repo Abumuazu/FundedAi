@@ -23,12 +23,12 @@ const socialLinks: socialLinks[] = [
         width: 14
     },
     {
-        imgSrc: '/assets/footer/tiktok.svg',
+        imgSrc: '/assets/footer/twitter.svg',
         link: 'https://www.tiktok.com/@fundedaipro?lang=en',
         width: 14
     },
     {
-        imgSrc: '/assets/footer/linkedin.svg',
+        imgSrc: '/assets/footer/facebook.svg',
         link: 'https://www.linkedin.com/company/funded-ai/',
         width: 14
     },

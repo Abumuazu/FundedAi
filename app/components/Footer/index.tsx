@@ -12,19 +12,24 @@ interface socialLinks {
 }
 
 const socialLinks: socialLinks[] = [
-    {
-        imgSrc: '/assets/footer/facebook.svg',
-        link: 'www.facebook.com',
-        width: 10
-    },
+    // {
+    //     imgSrc: '/assets/footer/facebook.svg',
+    //     link: 'www.facebook.com',
+    //     width: 10
+    // },
     {
         imgSrc: '/assets/footer/instagram.svg',
-        link: 'www.instagram.com',
+        link: 'https://www.instagram.com/fundedaipro/',
         width: 14
     },
     {
-        imgSrc: '/assets/footer/twitter.svg',
-        link: 'www.twitter.com',
+        imgSrc: '/assets/footer/tiktok.svg',
+        link: 'https://www.tiktok.com/@fundedaipro?lang=en',
+        width: 14
+    },
+    {
+        imgSrc: '/assets/footer/linkedin.svg',
+        link: 'https://www.linkedin.com/company/funded-ai/',
         width: 14
     },
 

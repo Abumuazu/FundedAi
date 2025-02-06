@@ -1,4 +1,3 @@
-
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { LockClosedIcon } from "@heroicons/react/20/solid";
@@ -51,8 +50,8 @@ const Register2 = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white  text-left align-middle shadow-xl transition-all">
+                <div className="flex min-h-full items-center justify-center py-12 px-0 sm:px-6 lg:px-8">
                     <div className="w-full max-w-md space-y-8">
                       <div>
                         <img
@@ -66,17 +65,13 @@ const Register2 = () => {
                       </div>
 
                       {/* iframe should have a fallback text outside */}
-                      <div className="text-center mt-4">
+                      <div className="w-full max-w-md mx-auto">
                         <iframe
                           src="https://docs.google.com/forms/d/e/1FAIpQLSf15wa1fThAfM3LSonN6yOtWIk7pcs6u7KeHomgpnQjgaWB_A/viewform?embedded=true"
-                          width="400"
-                          height="1390"
+                          className="w-full aspect-[3/4]"
                           frameBorder="0"
-                          marginHeight={0}
-                          marginWidth={0}   
                           loading="lazy"
                         >
-                          {/* Provide a fallback message for users */}
                           Loading...
                         </iframe>
                       </div>
@@ -86,7 +81,7 @@ const Register2 = () => {
                   <div className="mt-4 flex justify-end">
                     <button
                       type="button"
-                      className="inline-flex justify-center text-[#ec5290] text-xl font-medium ml-9 py-6 px-12 transition duration-150 ease-in-out bg-white hover:text-white rounded-full hover:bg-[#D33B79] ttty  bg-blue hover:text-black group-hover:bg-cornflowerblue group-hover:border-cornflowerblue border-2 border-blue rounded-full"
+                      className="inline-flex justify-center text-[#ec5290] text-lg sm:text-xl font-medium  sm:py-3 px-6 sm:px-6 transition duration-150 ease-in-out bg-white hover:text-white rounded-[40px] hover:bg-[#D33B79] ttty bg-blue hover:text-black group-hover:bg-cornflowerblue group-hover:border-cornflowerblue border-2 border-blue m-4 w-1/3"
                       onClick={closeModal}
                     >
                       Close

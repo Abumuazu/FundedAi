@@ -33,12 +33,12 @@ const Aboutdata: datatype[] = [
     {
         imgSrc: "/assets/features/signal.svg",
         heading: "Startup Sponsored Visas",
-        paragraph: ': Founders can apply for global startup visa programmes in the UK, USA, UAE, Qatar, Canada, and European including African countries. These startup visas allow founders to raise capital in those new markets and begin operations and relocation into these countries.'
+        paragraph: 'Founders can apply for global startup visa programmes in the UK, USA, UAE, Qatar, Canada, and European including African countries. These startup visas allow founders to raise capital in those new markets and begin operations and relocation into these countries.'
     },
     {
         imgSrc: "/assets/features/dollar.svg",
         heading: "Cloud Credits and Monetization",
-        paragraph: ': Founders building technology-based products can apply for up to $50,000 in cloud credits from our cloud partners network with AWS, Azure, and the rest of other cloud service providers.',
+        paragraph: 'Founders building technology-based products can apply for up to $50,000 in cloud credits from our cloud partners network with AWS, Azure, and the rest of other cloud service providers.',
 
     }
 ]
@@ -48,7 +48,7 @@ const Features = () => {
         <div className="bg-babyblue" id="features">
             <div className="mx-auto max-w-2xl py-20 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <h3 className="text-4xl sm:text-5xl font-semibold text-black text-center my-10">What We Do.</h3>
-                <h5 className="text-black opacity-60 text-lg font-normal text-center max-w-prose mx-auto break-words">FundedAI simplifies access to globally funded opportunities through AI-powered automation; handles the tedious application process on your behalf, whether it’s work visas, scholarships, or grants, we connect you to the resources you need to succeed.
+                <h5 className="text-black opacity-60 text-lg font-normal text-center max-w-prose mx-auto break-words">FundedAI simplifies access to globally available opportunities through AI-powered automation; handles the tedious application process on your behalf, whether it’s work visas, scholarships, or grants, we connect you to the resources you need to succeed.
                 </h5>
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-4 lg:gap-x-8 mt-10'>
